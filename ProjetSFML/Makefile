@@ -1,7 +1,7 @@
 CC      =       g++
 NAME    =       a.out
 SRC     =       *.cpp
-OBJ     =       *.o
+OBJ     =       $(SRC:%.c=%.o)
 RM      =       rm -f
 LDFLAGS =       -lsfml-graphics -lsfml-window -lsfml-system -lsfml-network -lsfml-audio
 
