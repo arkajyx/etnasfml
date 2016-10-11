@@ -1,9 +1,9 @@
-CC      =       g++
-NAME    =       a.out
-SRC     =       *.cpp
-OBJ     =       $(SRC:%.c=%.o)
-RM      =       rm -f
-LDFLAGS =       -lsfml-graphics -lsfml-window -lsfml-system -lsfml-network -lsfml-audio
+CC		=	g++
+NAME	=	a.out
+SRC		=	*.cpp
+OBJ		=	$(SRC:%.c=%.o)
+RM		=	rm -f
+LDFLAGS	=	-lsfml-graphics -lsfml-window -lsfml-system -lsfml-network -lsfml-audio
 
 $(NAME)	:	$(OBJ)
 		$(CC) $(OBJ) -o $(NAME) $(LDFLAGS)
