@@ -17,9 +17,9 @@ void	receive_packet(TcpSocket *client)
 
   while (client->receive(msg, 2048, received) == Socket::Done)
     {
-      printf("%s\n");
+      printf("%s\n", msg);
     }
-  printf("Unable to receive packet from client.\n");
+  printf("Client disconnected.\n");
 }
 
 bool	create_server(TcpListener *server)
