@@ -15,9 +15,14 @@ void	receive_packet(TcpSocket *client)
   char		msg[2048];
   size_t	received;
 
-  while (client->receive(msg, 2048, received) == Socket::Done)
+  while (client)
     {
-      printf("%s\n", msg);
+      if (client->receive(msg, 2048, received) == Socket::Done)
+	{
+	  printf("%s\n", msg);
+	}
+      else
+	break;
     }
   printf("Client disconnected.\n");
 }
